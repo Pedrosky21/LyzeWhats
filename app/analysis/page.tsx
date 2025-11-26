@@ -29,11 +29,11 @@ export default function AnalysisPage() {
 
   const a =
     data.analysis.messages_by_sender[
-      Object.keys(data.analysis.messages_by_sender)[0]
+      Object.keys(data.analysis.messages_by_sender)[1]
     ];
   const b =
     data.analysis.messages_by_sender[
-      Object.keys(data.analysis.messages_by_sender)[1]
+      Object.keys(data.analysis.messages_by_sender)[0]
     ];
   const max = a + b;
 
@@ -76,8 +76,8 @@ export default function AnalysisPage() {
     <>
       <div className="flex flex-col h-dvh">
         <Header
-          sender1={Object.entries(data.analysis.messages_by_sender)[0]?.[0]}
-          sender2={Object.entries(data.analysis.messages_by_sender)[1]?.[0]}
+          sender1={Object.entries(data.analysis.messages_by_sender)[1]?.[0]}
+          sender2={Object.entries(data.analysis.messages_by_sender)[0]?.[0]}
           messages={data.messages}
         />
         <div className="flex-1 px-4 pb-4">
