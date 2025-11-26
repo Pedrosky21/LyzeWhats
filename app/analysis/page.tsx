@@ -114,12 +114,12 @@ export default function AnalysisPage() {
                 <div className="bg-white rounded-lg shadow p-4 pt-2 col-span-2">
                   <h2>Emojis más usados</h2>
                   <div className="flex items-center h-full w-full">
-                    <p className="text-8xl">{topEmojis[0]}</p>
+                    <p className="text-8xl">{topEmojis[0][0]}</p>
                     <div className="flex bg-teal-dark rounded-lg">
-                      <p className="text-7xl">{topEmojis[0]}</p>
-                      <p className="text-7xl">{topEmojis[0]}</p>
-                      <p className="text-7xl">{topEmojis[0]}</p>
-                      <p className="text-7xl">{topEmojis[0]}</p>
+                      <p className="text-7xl">{topEmojis[1][0]}</p>
+                      <p className="text-7xl">{topEmojis[2][0]}</p>
+                      <p className="text-7xl">{topEmojis[3][0]}</p>
+                      <p className="text-7xl">{topEmojis[4][0]}</p>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function AnalysisPage() {
                     {Math.round(
                       data.analysis.conversation_duration
                         .average_duration_minutes
-                    )}
+                    )} minutos
                   </h2>
                   <p className="font-elegante text-lg">
                     duración promedio de las conversaciones
