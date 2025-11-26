@@ -75,12 +75,16 @@ export default function AnalysisPage() {
   return (
     <>
       <div className="flex flex-col h-dvh">
-        <Header />
+        <Header
+          sender1={Object.entries(data.analysis.messages_by_sender)[0]?.[0]}
+          sender2={Object.entries(data.analysis.messages_by_sender)[1]?.[0]}
+          messages={data.messages}
+        />
         <div className="flex-1 px-4 pb-4">
           <div className="h-full grid grid-cols-16 gap-4 p-4 bg-gray-back rounded-lg text-teal-dark text-2xl">
             <div className="flex flex-col col-span-5 bg-white rounded-lg shadow p-4 pt-2 text-center">
               <h2>Mensajes enviados</h2>
-              <p className="font-elegante text-lg text-left">1.000.000</p>
+              <p className="font-elegante text-lg text-left">{max}</p>
               <div className="flex-1 flex items-center justify-center">
                 <div className="relative flex h-full w-4/6 justify-between">
                   <div className="absolute z-1 top-0 right-0 border-t h-1 w-80 border-t-teal-dark border-dashed"></div>
@@ -128,14 +132,17 @@ export default function AnalysisPage() {
                     {Math.round(
                       data.analysis.conversation_duration
                         .average_duration_minutes
-                    )} minutos
+                    )}{" "}
+                    minutos
                   </h2>
                   <p className="font-elegante text-lg">
                     duración promedio de las conversaciones
                   </p>
                 </div>
                 <div className="bg-white rounded-lg shadow p-4">
-                  <h2 className="font-elegante text-5xl">{saludosTotal} veces</h2>
+                  <h2 className="font-elegante text-5xl">
+                    {saludosTotal} veces
+                  </h2>
                   <p className="font-elegante text-lg">
                     se dijeron buenos dias o hasta mañana
                   </p>
@@ -146,7 +153,10 @@ export default function AnalysisPage() {
               <h2 className="text-center">Lo más dicho</h2>
               <div className="flex flex-col space-y-2 pt-2">
                 {frases.map(([frase]) => (
-                  <div key={frase} className="bg-teal-dark rounded-l-lg rounded-br-lg px-2 py-1">
+                  <div
+                    key={frase}
+                    className="bg-teal-dark rounded-l-lg rounded-br-lg px-2 py-1"
+                  >
                     <p className="text-white text-lg">{`"${frase}"`}</p>
                   </div>
                 ))}
