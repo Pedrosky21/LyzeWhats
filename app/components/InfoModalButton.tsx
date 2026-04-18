@@ -42,7 +42,7 @@ export default function InfoModalButton() {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-teal-dark mt-2">Información del Autor</h3>
             </div>
-            <div className="space-y-4">
+          <div className="space-y-4">
               <div className="flex items-center space-x-3 p-3 bg-gray-back rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-teal-dark">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -63,6 +63,16 @@ export default function InfoModalButton() {
                   </a>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-6 border-t border-gray-200 pt-5">
+              <h4 className="text-lg font-bold text-teal-dark mb-3">¿Cómo exporto mi chat?</h4>
+              <ol className="list-decimal pl-5 text-sm text-teal-light space-y-1">
+                <li>Abrí WhatsApp en tu celular y entrá al chat.</li>
+                <li>Tocá el menú (3 puntos) o el nombre del contacto.</li>
+                <li>Elegí <strong>Más</strong> y luego <strong>Exportar chat</strong>.</li>
+                <li>Seleccioná <strong>"Sin archivos"</strong> y guardá o compartite el `.txt`.</li>
+              </ol>
             </div>
             <div className="mt-8">
               <button 
